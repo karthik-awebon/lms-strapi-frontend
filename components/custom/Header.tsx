@@ -16,10 +16,7 @@ export function LoggedInUser({
 }) {
   return (
     <div className='flex gap-2'>
-      <Link
-        href='/dashboard/account'
-        className='font-semibold hover:text-primary'
-      >
+      <Link href='/' className='font-semibold hover:text-primary'>
         {userData.username}
       </Link>
       <LogoutButton />
@@ -44,11 +41,10 @@ interface HeaderProps {
 
 export async function Header() {
   const user = await getUserMeLoader();
-  console.log(user);
 
   return (
     <div className='flex items-center justify-between px-4 py-3 bg-white shadow-md dark:bg-gray-800'>
-      <Logo text={'LMS'} />
+      <Logo text={'LMS Live'} />
       <div className='flex items-center gap-4'>
         {user.ok ? (
           <LoggedInUser userData={user.data} />
