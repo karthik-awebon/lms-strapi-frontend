@@ -117,7 +117,7 @@ export async function loginUserAction(prevState: any, formData: FormData) {
       message: "Failed to Login.",
     };
   }
-
+  console.log('cookies', config);
   cookies().set("jwt", responseData.jwt, config);
 
   redirect("/");
