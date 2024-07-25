@@ -20,9 +20,9 @@ const schemaRegister = z.object({
 const config = {
   maxAge: 60 * 60 * 24 * 7, // 1 week
   path: "/",
-  domain: "lms-strapi-frontend-gvd2.vercel.app" ?? "localhost",
+  domain: process.env.NEXT_PUBLIC_VERCEL_ENV ?? "localhost",
   httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
+  secure: process.env.VERCEL_ENV === "production",
 };
 
 export async function registerUserAction(prevState: any, formData: FormData) {
@@ -60,7 +60,7 @@ export async function registerUserAction(prevState: any, formData: FormData) {
       message: "Failed to Register.",
     };
   }
-
+  console.log('cookies', config);
   cookies().set("jwt", responseData.jwt, config);
   redirect("/");
 }
