@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getHomePageData } from '@/data/loader';
-import Image from 'next/image';
 
 interface CourseCardProps {
   id: string;

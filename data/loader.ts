@@ -35,7 +35,6 @@ export async function getHomePageData() {
       },
     },
   });
-  console.log(url);
   return await fetchData(url.href);
 }
 
