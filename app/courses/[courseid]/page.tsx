@@ -38,7 +38,7 @@ export default async function CourseCardRoute({
                     >
                       {user.ok ? (
                         <a
-                          href={`${baseUrl + vid.url.url}`}
+                          href={`${vid.url.url}`}
                           className='video__link text-blue-500 hover:underline'
                         >
                           {vid.title}
