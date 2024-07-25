@@ -20,7 +20,7 @@ const schemaRegister = z.object({
 const config = {
   maxAge: 60 * 60 * 24 * 7, // 1 week
   path: "/",
-  domain: process.env.VERCEL_URL ?? "localhost",
+  domain: "lms-strapi-frontend-gvd2.vercel.app" ?? "localhost",
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
 };
