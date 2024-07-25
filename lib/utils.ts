@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getStrapiURL() {
-  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "https://typical-treasure-277f4fa058.strapiapp.com";
+  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
 }
 
 export function flattenAttributes(data: any): any {
