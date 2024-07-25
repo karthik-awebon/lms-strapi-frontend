@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useFormState } from 'react-dom';
 
+import { ZodErrors } from '@/components/custom/ZodErrors';
 import {
   CardTitle,
   CardDescription,
@@ -12,9 +13,8 @@ import {
   Card,
 } from '@/components/ui/card';
 
-import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { ZodErrors } from '@/components/custom/ZodErrors';
+import { Label } from '@/components/ui/label';
 import { registerUserAction } from '@/data/actions/auth-actions';
 import { StrapiErrors } from './custom/StrapiErrors';
 import { SubmitButton } from './custom/submit-button';

@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { useFormState } from 'react-dom';
 
+import { StrapiErrors } from '@/components/custom/StrapiErrors';
+import { ZodErrors } from '@/components/custom/ZodErrors';
+
 import {
   CardTitle,
   CardDescription,
@@ -12,12 +15,10 @@ import {
   Card,
 } from '@/components/ui/card';
 
-import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { ZodErrors } from '@/components/custom/ZodErrors';
-import { StrapiErrors } from '@/components/custom/StrapiErrors';
-import { SubmitButton } from './custom/submit-button';
+import { Label } from '@/components/ui/label';
 import { loginUserAction } from '@/data/actions/auth-actions';
+import { SubmitButton } from './custom/submit-button';
 
 const INITIAL_STATE = {
   zodErrors: null,

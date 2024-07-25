@@ -1,9 +1,9 @@
 "use server";
 
-import { z } from "zod";
-import { loginUserService, registerUserService } from "../services/auth-service";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { z } from "zod";
+import { loginUserService, registerUserService } from "../services/auth-service";
 
 const schemaRegister = z.object({
   username: z.string().min(3).max(20, {

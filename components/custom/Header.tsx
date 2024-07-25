@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { getUserMeLoader } from '@/data/services/get-user-me-loader';
-import { Button } from '@/components/ui/button';
 import { LogoutButton } from '@/components/custom/LogoutButton';
+import { Button } from '@/components/ui/button';
+import { getUserMeLoader } from '@/data/services/get-user-me-loader';
 import { Logo } from './Logo';
 
 interface AuthUserProps {
